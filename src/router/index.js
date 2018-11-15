@@ -27,7 +27,8 @@ export default new Router({
     {
       path: '/bananer',
       name: 'bananer',
-      component: Bananer
+      component: Bananer,
+      alias: '/b' 
     }
   ]
 })
