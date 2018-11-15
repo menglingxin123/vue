@@ -8,9 +8,8 @@ Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  template: '<p>{{ word }}</p>',
-  data:{
-  	word:'6666'
-  }
+    el: '#app',
+    router,
+    components: { App },
+    template: '<App/>'
 })
