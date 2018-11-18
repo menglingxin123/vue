@@ -1,8 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <button @click="add">{{ count }}</button>
-    <button @click="reduce">{{ count1 }}</button>
+    <a @click="add">{{ count }}</a></br>
   </div>
 </template>
 
@@ -14,21 +13,17 @@ export default {
              msg:'bananer'
         }
     },
+
     computed:{
         count(){
-            return this.$store.state.count
-        },
-        count1(){
-            return this.$store.state.count1
+            return this.$store.getters.sumWithRootCount
         }
     },
     methods:{
         add(){
-            this.$store.commit('increment')
+            this.$store.dispatch('increment')
         },
-        reduce(){
-            this.$store.commit('reduce')
-        }
+        add1(){}
     }
 }
 </script>
